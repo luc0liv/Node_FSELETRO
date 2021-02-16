@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Search</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&family=Montserrat&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+ <style>
+     body {
+         background-image: url(https://images7.alphacoders.com/828/828731.jpg);
+         background-color: crimson;
+         background-attachment: fixed;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover ;
+         
+     }
+
+     .forms {    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 100px;
+
+     }
+     .nome {
+         background-color: blue;
+         border-radius: 5px;       
+         margin-bottom: 20px;
+         padding: 20px;
+     }
+
+      .nome:hover {
+        box-shadow: 5px 5px 15px 5px rgb(245, 242, 242);
+     }
+
+     .number {
+        background-color: blue;
+         border-radius: 5px;
+         margin-bottom: 20px;
+         padding: 20px;
+     }
+
+    .number:hover {
+       box-shadow: 5px 5px 15px 5px rgb(245, 242, 242);
+    }
+
+     .header {
+         background-color: rgb(252, 252, 109);
+         padding: 10px;
+        
+     }
+
+     .header h2 {
+        font-family: 'Lexend Mega', sans-serif;
+     }
+
+     .content {
+         background-color: red;
+         padding: 10px;
+     }
+     
+     label {
+         font-family: 'Lexend Mega', sans-serif;
+         font-weight: bold;
+     }
+    
+    
+    img {
+        margin-bottom: 10px;
+        width: 200px;
+        transition: width 2s;
+        
+
+    }
+
+    img:hover {
+        width: 250px;
+        
+    }
+ </style>
+</head>
+
+<body>
+
+<main class="forms">
+
+    <section class="container col-lg-4 nome">
+        
+        <div class="header">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokemon Logo">
+                
+            <h2>Encontre o Pokémon pelo nome!</h2>
+            <hr>
+            <small>Exemplo: pikachu ou charmander</small>          
+        </div>
+    
+        <div class="content">
+            <form action="/pokeSearch" method="POST">
+                <div class="form-group">
+                    <label for="pokemon">Pokémon</label>
+                     <input class="form-control" type="text" name="pokemon" id="pokemon">
+                    <input type="submit" class="btn btn-lg btn-primary btn-outline-warning mt-4" value="Buscar">
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <section class="container col-lg-4 number">
+        <div class="header">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokemon Logo">
+                
+         <h2>Digite o número e descubra um Pokémon!</h2>
+         <hr>
+         <small>Números sem 0 (zero) antes.</small>
+                      
+        </div>
+    
+        <div class="content">
+            <form action="/typeSearch" method="POST">
+                <div class="form-group">
+                    <label for="pokemon_number">Número</label>
+                    <input class="form-control" type="text" name="pokemon_number" id="pokemon_number" required placeholder="Type the numbers here (Except for 0)">
+                    <input type="submit" class="btn-lg btn-primary btn-outline-warning mt-lg-4" value="Buscar">
+                </div>
+            </form>
+        </div>
+        
+    </section>
+
+</main>
+
+</body>
+</html>
